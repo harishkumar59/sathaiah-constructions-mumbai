@@ -298,6 +298,19 @@ body::before {
   background: rgba(255,255,255,0.14);
   transform: translateY(-2px);
 }
+.btn-whatsapp {
+  background: #25D366;
+  color: #07190c;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-whatsapp:hover {
+  background: #20ba59;
+  color: #07190c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.35);
+}
 
 /* ============================================
    PROOF STRIP
@@ -785,6 +798,12 @@ body::before {
   color: #aeb8af;
   font-size: .9rem;
 }
+.footer-hours {
+  margin-top: 10px;
+  color: var(--green2) !important;
+  font-weight: 600;
+  font-size: 0.85rem !important;
+}
 .footer nav {
   display: grid;
   gap: 8px;
@@ -799,6 +818,37 @@ body::before {
   border-top: 1px solid var(--line);
   color: #869087;
   font-size: .78rem;
+}
+
+/* ============================================
+   FLOATING WHATSAPP
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 99;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: #07190c;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.whatsapp-float svg {
+  flex-shrink: 0;
+  fill: #07190c;
+}
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55);
+  color: #07190c;
 }
 
 /* ============================================
@@ -893,7 +943,7 @@ body::before {
   .mobile-bar {
     position: fixed;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     left: 0; right: 0; bottom: 0;
     z-index: 60;
     padding: 8px max(10px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
@@ -908,16 +958,23 @@ body::before {
     justify-content: center;
     border-radius: 10px;
     font-weight: 900;
-    font-size: .88rem;
+    font-size: .84rem;
     text-decoration: none;
   }
   .mobile-call {
     background: #fff;
     color: #111;
   }
+  .mobile-wa {
+    background: #25D366;
+    color: #07190c;
+  }
   .mobile-msg {
     background: var(--green);
     color: #071008;
+  }
+  .whatsapp-float {
+    display: none;
   }
   .footer { padding-bottom: 92px }
 }
